@@ -6,3 +6,7 @@ This implementation has been tailored to suit the [Cityscapes](https://www.citys
 <p align="center">
 	<img src="images/ESNet_cityscapes_demo.png">
 </p>
+
+<p align="center">
+	<img src="images/ESNet_camvid_demo.png" width="685">
+</p>
