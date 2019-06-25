@@ -17,16 +17,17 @@ The whole network has nearly symmetric architecture, which is mainly composed of
 - Pytorch 1.1, also support torch version >= 0.4.1
 
 ## Units Design
+
 <p align="center"><img width="100%" src="./images/ESNet_units.png" /></p>
+
 ## Architecture
+
 <p align="center"><img width="100%" src="./images/ESNet_overview.png" /></p>
+
 ## Pakages
-
 This repository is organized as:
-
 - [models](https://github.com/xiaoyufenfei/ESNet/models) contains the layer configuration of **ESNet** introduced in our paper.
 - [train](https://github.com/xiaoyufenfei/ESNet/train) contains the training details and the **class weights** used to train our networks.
-
 In our implementation, **PyTorch (>= v0.4.1)** is used to perform all the experiments.
 
 ## Implementation:
