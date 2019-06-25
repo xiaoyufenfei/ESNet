@@ -19,11 +19,9 @@ The whole network has nearly symmetric architecture, which is mainly composed of
 ## Units Design
 
 <p align="center"><img width="100%" src="./images/ESNet_units.png" /></p>
-
 ## Architecture
 
 <p align="center"><img width="100%" src="./images/ESNet_overview.png" /></p>
-
 ## Pakages
 This repository is organized as:
 - [models](https://github.com/xiaoyufenfei/ESNet/models) contains the layer configuration of **ESNet** introduced in our paper.
@@ -56,9 +54,9 @@ cd ESNet-master
 -  Then the trained model and the validation results will be saved in the `saveDir`file you specify. 
 
 ## Evaluation
-**Accuracy: ** ESNet achieves a mIoU scores of **70.7 %** on the Cityscapes dataset without any pretrained model.
+**Accuracy:**  ESNet achieves a mIoU scores of **70.7 %** on the Cityscapes dataset without any pretrained model.
 
-**Speed:** For the resolution 512x1024 input, ESNet can run at the speed of  **63** FPS on a singel GTX 1080 Ti, respectively.
+**Speed:**  For the resolution 512x1024 input, ESNet can run at the speed of  **63** FPS on a singel GTX 1080 Ti, respectively.
 
 Please refer to our article for more details [arXiv Link](https://arxiv.org/abs/1906.09826) .
 
