@@ -1,9 +1,5 @@
 # ESNet
 
-[![python-image]][python-url]
-[![pytorch-image]][pytorch-url]
-[![lic-image]][lic-url]
-
 This repository contains the implementation details of our paper: [[arXiv:1906.09826]](https://arxiv.org/pdf/1906.09826.pdf)
 "**ESNet: An Efficient Symmetric Network for Real-time Semantic Segmentation**" 
 by [Yu Wang](https://github.com/xiaoyufenfei) . 
@@ -13,15 +9,13 @@ The recent years have witnessed great advances for semantic segmentation using d
 The whole network has nearly symmetric architecture, which is mainly composed of a series of factorized convolution unit (**FCU**) and its parallel counterparts (**PFCU**). On one hand, the FCU adopts a widely-used 1D factorized convolution in residual layers. On the other hand, the parallel version employs a transform-split-transform-merge strategy in the designment of residual module, where the split branch adopts dilated convolutions with different rate to enlarge receptivefield. Our model has nearly 1.6M parameters, and is able to be performed over 62 FPS on a single GTX 1080Ti GPU card. The experiments demonstrate that our approach achieves state-of-the-art results in terms of speed and accuracy trade-of for real-time semantic segmentation on CityScapes dataset.
 
 ## Dependencies
-- Python 3.6.x 
-- Pytorch 1.1, also support torch version >= 0.4.1
+- [**Python 3.6.x** ](https://www.python.org/)
+- [**Pytorch 1.1**](https://pytorch.org/), also support torch version >= 0.4.1
 
 ## Units Design
 <p align="center"><img width="90%" src="./images/ESNet_units.png" /></p>
-
 ## Architecture
 <p align="center"><img width="90%" src="./images/ESNet_overview.png" /></p>
-
 ## Pakages
 
 This repository is organized as:
@@ -36,7 +30,7 @@ Flow the steps presented below:
 git clone https://github.com/xiaoyufenfei/ESNet.git
 cd ESNet-master
 ```
-- You can download [cityscapes](https://www.cityscapes-dataset.com/) from [here](https://www.cityscapes-dataset.com/downloads/). Note: please download [leftImg8bit_trainvaltest.zip(11GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=4) and [gtFine_trainvaltest(241MB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1) and [gtCoarse(1.3GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1). then use [CityscapesScripts](https://github.com/mcordts/cityscapesScripts)  convert the dataset to [19 categories](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/helpers/labels.py), detail you can use `preparation/createTrainIdInstanceImgs.py` convert annotations with `train IDs`  .  The Dataset file should have this basic structure.
+- You can download [cityscapes](https://www.cityscapes-dataset.com/) from [here](https://www.cityscapes-dataset.com/downloads/). Note: please download [leftImg8bit_trainvaltest.zip(11GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=4) and [gtFine_trainvaltest(241MB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1) and [gtCoarse(1.3GB)](https://www.cityscapes-dataset.com/file-handling/?packageID=1).  **Please note that for training you should use the "_labelTrainIds" and not the "_labelIds", you can download the [cityscapes scripts](https://github.com/mcordts/cityscapesScripts) and use the [conversor](https://github.com/mcordts/cityscapesScripts/blob/master/cityscapesscripts/preparation/createTrainIdLabelImgs.py) to generate trainIds from labelIds**.
 ```
 ├── leftImg8bit
 │   ├── train
@@ -85,10 +79,3 @@ If you feel our ESNet is useful for your research, please consider citing our pa
     Year = {2019}
 } 
 ```
-
-[python-image]: https://img.shields.io/badge/Python-3.x-ff69b4.svg
-[python-url]: https://www.python.org/
-[pytorch-image]: https://img.shields.io/badge/PyTorch-1.1-2BAF2B.svg
-[pytorch-url]: https://pytorch.org/
-[lic-image]: https://img.shields.io/aur/license/pac.svg
-[lic-url]: https://github.com/xiaoyufenfei/ESNet/blob/master/LICENSE
