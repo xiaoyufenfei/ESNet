@@ -14,10 +14,11 @@ The whole network has nearly symmetric architecture, which is mainly composed of
 
 ## Units Design
 <p align="center"><img width="90%" src="./images/ESNet_units.png" /></p>
+
 ## Architecture
 <p align="center"><img width="90%" src="./images/ESNet_overview.png" /></p>
-## Pakages
 
+## Pakages
 This repository is organized as:
 - [models](https://github.com/xiaoyufenfei/ESNet/models) contains the layer configuration of **ESNet** introduced in our paper.
 - [train](https://github.com/xiaoyufenfei/ESNet/train) contains the training details and the **class weights** used to train our networks.
